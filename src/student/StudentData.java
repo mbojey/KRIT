@@ -1,0 +1,113 @@
+package student;
+
+import inferenceTools.Bayes_net;
+import inferenceTools.JoinTree;
+
+public class StudentData {
+	public static JoinTree student = null;
+
+	public StudentData() {
+		Bayes_net dbn = new Bayes_net();
+		double[] understanding = { 1 / 3.0, 1 / 3.0, 1 / 3.0 };
+		double[][] understanding1 = { { .985, .01, .005 }, { .025, .95, .025 },
+				{ .005, .01, .985 } };
+		double[][] math = { { .85, .1, .05 }, { .3, .4, .3 }, { .1, .15, .75 } };
+		double[][] concepts = { { .85, .1, .05 }, { .3, .4, .3 }, { .1, .15, .75 } };
+		double[][] need = { { .2, .3, .5 }, { .25, .5, .25 },
+				{ .5, .3, .2 } };
+		double[][] receptivenessNeediness = { { .5, .3, .2 }, { .25, .5, .25 },
+				{ .5, .3, .2 } };
+		double[][] junction = { { .85, .1, .05 }, { .3, .4, .3 }, { .1, .15, .75 } };
+		double[][] loop = { { .8, .15, .05 }, { .1, .8, .1 }, { .05, .15, .8 } };
+		double[][] numerically = { { .9, .1 }, { .5, .5 }, { .2, .8 } };
+		double[][] currents = { { .9, .1 }, { .5, .5 }, { .2, .8 } };
+		double[][] voltages = { { .9, .1 }, { .5, .5 }, { .2, .8 } };
+		double[][] sign = { { .8, .15, .05 }, { .1, .8, .1 }, { .05, .15, .8 } };
+		double[][] units = { { .8, .15, .05 }, { .1, .8, .1 }, { .05, .15, .8 } };
+		double[][] browse = { { .6, .4 }, { .5, .5 }, { .4, .6 } };
+		double[][] blank =  { { .6, .4 }, { .5, .5 }, { .4, .6 } };
+		double[][] pause =  { { .6, .4 }, { .5, .5 }, { .4, .6 } };
+		double[][] undo =  { { .6, .4 }, { .5, .5 }, { .4, .6 } };
+		double[][] ask = { { .8, .2 }, { .5, .5 }, { .2, .8 } };
+		double[][] readHint = { { .9, .1 }, { .5, .5 }, { .1, .9 } };
+		double[][] readAnswer = { { .9, .1 }, { .5, .5 }, { .1, .9 } };
+		dbn.add_vertex("Numerically Correct", 2);
+		dbn.add_vertex("Voltages Total Zero", 2);
+		dbn.add_vertex("Currents Balanced", 2);
+		dbn.add_vertex("Sign Convention Correct", 3);
+		dbn.add_vertex("Units Correct", 3);
+		dbn.add_vertex("Loop Rule", 3);
+		dbn.add_vertex("Junction Rule", 3);
+		dbn.add_vertex("Concepts", 3);
+		dbn.add_vertex("Math", 3);
+		dbn.add_vertex("Need", 3);
+		dbn.add_vertex("Receptiveness", 3);
+		dbn.add_vertex("Blank", 2);
+		dbn.add_vertex("Browse", 2);
+		dbn.add_vertex("Pause", 2);
+		dbn.add_vertex("Undo", 2);
+		dbn.add_vertex("Ask for Hint", 2);
+		dbn.add_vertex("Read Hint", 2);
+		dbn.add_vertex("Read Answer", 2);
+		dbn.add_vertex("Understanding", 3, understanding);
+		dbn.add_edge("Understanding", 3, "Math", 3, math);
+		dbn.add_edge("Understanding", 3, "Concepts", 3, concepts);
+		dbn.add_edge("Understanding", 3, "Need", 3, need);
+		dbn.add_edge("Need", 3, "Receptiveness", 3, receptivenessNeediness);
+		dbn.add_edge("Concepts", 3, "Junction Rule", 3, junction);
+		dbn.add_edge("Concepts", 3, "Loop Rule", 3, loop);
+		dbn.add_edge("Math", 3, "Numerically Correct", 2, numerically);
+		dbn.add_edge("Junction Rule", 3, "Currents Balanced", 2, currents);
+		dbn.add_edge("Concepts", 3, "Units Correct", 3, units);
+		dbn.add_edge("Loop Rule", 3, "Sign Convention Correct", 3, sign);
+		dbn.add_edge("Loop Rule", 3, "Voltages Total Zero", 2, voltages);
+		dbn.add_edge("Need", 3, "Blank", 2, blank);
+		dbn.add_edge("Need", 3, "Browse", 2, browse);
+		dbn.add_edge("Need", 3, "Pause", 2, pause);
+		dbn.add_edge("Need", 3, "Undo", 2, undo);
+		dbn.add_edge("Receptiveness", 3, "Ask for Hint", 2, ask);
+		dbn.add_edge("Receptiveness", 3, "Read Hint", 2, readHint);
+		dbn.add_edge("Receptiveness", 3, "Read Answer", 2, readAnswer);
+		dbn.add_vertex("Numerically Correct1", 2);
+		dbn.add_vertex("Voltages Total Zero1", 2);
+		dbn.add_vertex("Currents Balanced1", 2);
+		dbn.add_vertex("Sign Convention Correct1", 3);
+		dbn.add_vertex("Units Correct1", 3);
+		dbn.add_vertex("Loop Rule1", 3);
+		dbn.add_vertex("Junction Rule1", 3);
+		dbn.add_vertex("Concepts1", 3);
+		dbn.add_vertex("Math1", 3);
+		dbn.add_vertex("Need1", 3);
+		dbn.add_vertex("Receptiveness1", 3);
+		dbn.add_vertex("Blank1", 2);
+		dbn.add_vertex("Browse1", 2);
+		dbn.add_vertex("Pause1", 2);
+		dbn.add_vertex("Undo1", 2);
+		dbn.add_vertex("Ask for Hint1", 2);
+		dbn.add_vertex("Read Hint1", 2);
+		dbn.add_vertex("Read Answer1", 2);
+		dbn.add_vertex("Understanding1", 3);
+		dbn.add_edge("Understanding1", 3, "Math1", 3, math);
+		dbn.add_edge("Understanding1", 3, "Concepts1", 3, concepts);
+		dbn.add_edge("Understanding1", 3, "Need1", 3, need);
+		dbn.add_edge("Need1", 3, "Receptiveness1", 3, receptivenessNeediness);
+		dbn.add_edge("Concepts1", 3, "Junction Rule1", 3, junction);
+		dbn.add_edge("Concepts1", 3, "Loop Rule1", 3, loop);
+		dbn.add_edge("Math1", 3, "Numerically Correct1", 2, numerically);
+		dbn.add_edge("Junction Rule1", 3, "Currents Balanced1", 2, currents);
+		dbn.add_edge("Concepts1", 3, "Units Correct1", 3, units);
+		dbn.add_edge("Loop Rule1", 3, "Sign Convention Correct1", 3, sign);
+		dbn.add_edge("Loop Rule1", 3, "Voltages Total Zero1", 2, voltages);
+		dbn.add_edge("Need1", 3, "Blank1", 2, blank);
+		dbn.add_edge("Need1", 3, "Browse1", 2, browse);
+		dbn.add_edge("Need1", 3, "Pause1", 2, pause);
+		dbn.add_edge("Need1", 3, "Undo1", 2, undo);
+		dbn.add_edge("Receptiveness1", 3, "Ask for Hint1", 2, ask);
+		dbn.add_edge("Receptiveness1", 3, "Read Hint1", 2, readHint);
+		dbn.add_edge("Receptiveness1", 3, "Read Answer1", 2, readAnswer);
+		dbn.add_edge("Understanding", 3, "Understanding1", 3, understanding1);
+		dbn.add_edge("Need", 3, "Need1", 3, understanding1);
+		student = dbn.convertToJoinTree();
+		student.makeConsistent();
+	}
+}
