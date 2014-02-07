@@ -1,4 +1,4 @@
 KRIT
 ====
 
-KRIT system
+Kirchhoff's Rules Intelligent Tutor.
