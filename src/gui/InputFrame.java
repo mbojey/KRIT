@@ -65,7 +65,7 @@ public class InputFrame extends JFrame implements MouseMotionListener {
 	JButton point = new JButton(".");
 	JButton volts = new JButton("V");
 	JButton amps = new JButton("A");
-	JButton ohms = new JButton("Î©");
+	JButton ohms = new JButton("½");
 	JButton i1 = new JButton("I1");
 	JButton i2 = new JButton("I2");
 	JButton i3 = new JButton("I3");
@@ -388,11 +388,11 @@ public class InputFrame extends JFrame implements MouseMotionListener {
 							&& Character.isDigit(previous.charAt(previous
 									.length() - 1))) {
 						String soFar = input.getText();
-						input.setText(soFar + "Î©");
+						input.setText(soFar + "½");
 					}
 				} catch (StringIndexOutOfBoundsException ex) {
 					String soFar = input.getText();
-					input.setText(soFar + "Î©");
+					input.setText(soFar + "½");
 				}
 			}
 		});

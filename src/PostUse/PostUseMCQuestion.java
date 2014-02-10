@@ -22,8 +22,6 @@ import javax.swing.JFrame;
 import javax.swing.JRadioButton;
 import javax.swing.JTextPane;
 
-import PreUse.InputFrame;
-
 @SuppressWarnings("serial")
 public class PostUseMCQuestion extends JFrame {
 	int subject = 01;

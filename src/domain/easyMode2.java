@@ -100,11 +100,11 @@ public class easyMode2 extends Mode2 {
 
 	private void addsolutiontext() {
 		solutions.add("I1 + I2 = I3");
-		solutions.add(v2 + "V - " + r1 + "Î©*I1 - " + r2 + "Î©*I3 = 0");
-		solutions.add("-" + r3 + "Î©*I2 - " + v1 + "V + " + r1 + "Î©*I1 - " + v2
+		solutions.add(v2 + "V - " + r1 + "½*I1 - " + r2 + "½*I3 = 0");
+		solutions.add("-" + r3 + "½*I2 - " + v1 + "V + " + r1 + "½*I1 - " + v2
 				+ "V = 0");
-		solutions.add(v2 + "V - " + decim.format(r1 + r2) + "Î©*I1 - " + r2
-				+ "Î©*I2 = 0");
+		solutions.add(v2 + "V - " + decim.format(r1 + r2) + "½*I1 - " + r2
+				+ "½*I2 = 0");
 		solutions.add("" + decim.format((v2 + v1) / r1) + "A + "
 				+ decim.format(r3 / r1) + "I2 = I1");
 		solutions.add("" + i2 + "A");

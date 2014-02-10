@@ -116,10 +116,10 @@ public class medMode2 extends Mode2 {
 
 	private void addsolutiontext() {
 		solutions.add("I2 = I1 + I3");
-		solutions.add("-" + v1 + "V + " + r1 + "Î©*I3 + " + r2 + "Î©*I2 + " + v2
+		solutions.add("-" + v1 + "V + " + r1 + "½*I3 + " + r2 + "½*I2 + " + v2
 				+ "V = 0");
-		solutions.add("-" + v3 + "V + " + r2 + "Î©*I2 + " + v2 + "V + " + r3
-				+ "Î©*I1 = 0");
+		solutions.add("-" + v3 + "V + " + r2 + "½*I2 + " + v2 + "V + " + r3
+				+ "½*I1 = 0");
 		solutions.add("" + i2 + "A");
 		solutions.add("" + i1 + "A");
 		solutions.add("" + i3 + "A");

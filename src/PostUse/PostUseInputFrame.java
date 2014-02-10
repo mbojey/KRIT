@@ -66,6 +66,7 @@ public class PostUseInputFrame extends JFrame {
 	Mode2 question;
 	String hinttext = "";
 	String explanation = "";
+	@SuppressWarnings("unused")
 	private int postUse;
 
 	public PostUseInputFrame(int difficulty) {
@@ -332,11 +333,11 @@ public class PostUseInputFrame extends JFrame {
 							&& Character.isDigit(previous.charAt(previous
 									.length() - 1))) {
 						String soFar = input.getText();
-						input.setText(soFar + "Î©");
+						input.setText(soFar + "½");
 					}
 				} catch (StringIndexOutOfBoundsException ex) {
 					String soFar = input.getText();
-					input.setText(soFar + "Î©");
+					input.setText(soFar + "½");
 				}
 			}
 		});

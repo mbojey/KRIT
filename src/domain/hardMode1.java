@@ -53,32 +53,32 @@ public class hardMode1 extends Mode1 {
 		wrongsolutions.add("I3 = I1 - I2");
 		wrongsolutions.add("I3 + I2 = I1");
 		wrongsolutions.add("I3 = 2 * I1");
-		wrongsolutions.add(v3 + "V + " + r4 + "Î©*I2 + " + r3 + "Î©*I2 + " + r2
-				+ "Î©*I3 - " + v2 + "V = 0");
+		wrongsolutions.add(v3 + "V + " + r4 + "½*I2 + " + r3 + "½*I2 + " + r2
+				+ "½*I3 - " + v2 + "V = 0");
 		wrongsolutions
-				.add("-" + v3 + "V - " + r4 + "Î©*I2 - " + r3 + "Î©*I2 - " + r2
-						+ "Î©*I3 + " + v2 + "V = 0");
+				.add("-" + v3 + "V - " + r4 + "½*I2 - " + r3 + "½*I2 - " + r2
+						+ "½*I3 + " + v2 + "V = 0");
 		wrongsolutions
-				.add("-" + v3 + "A + " + r4 + "Î©*I2 + " + r3 + "Î©*I2 + " + r2
-						+ "Î©*I3 + " + v2 + "A = 0");
+				.add("-" + v3 + "A + " + r4 + "½*I2 + " + r3 + "½*I2 + " + r2
+						+ "½*I3 + " + v2 + "A = 0");
 		wrongsolutions
-				.add("-" + v1 + "A + " + r1 + "Î©*I1 + " + r2 + "Î©*I3 + " + v2
+				.add("-" + v1 + "A + " + r1 + "½*I1 + " + r2 + "½*I3 + " + v2
 						+ "A = 0");
 		wrongsolutions
-				.add(v1 + "V + " + r1 + "Î©*I1 + " + r2 + "Î©*I3 - " + v2
+				.add(v1 + "V + " + r1 + "½*I1 + " + r2 + "½*I3 - " + v2
 						+ "V = 0");
 		wrongsolutions
-				.add("-" + v1 + "V - " + r1 + "Î©*I1 - " + r2 + "Î©*I3 + " + v2
+				.add("-" + v1 + "V - " + r1 + "½*I1 - " + r2 + "½*I3 + " + v2
 						+ "V = 0");
 		wrongsolutions.add("" + i3 + "V");
 		wrongsolutions.add("" + (i3 + .25) + "A");
-		wrongsolutions.add("" + i3 + "Î©");
-		wrongsolutions.add("" + i1 + "Î©");
+		wrongsolutions.add("" + i3 + "½");
+		wrongsolutions.add("" + i1 + "½");
 		wrongsolutions.add("" + (i1 + .05) + "A");
 		wrongsolutions.add("" + i1 + "V");
 		wrongsolutions.add("-" + i2 + "A");
 		wrongsolutions.add("" + i2 + "V");
-		wrongsolutions.add("" + i2 + "Î©");
+		wrongsolutions.add("" + i2 + "½");
 	}
 
 	private void addquestiontext() {
@@ -102,9 +102,9 @@ questions
 
 	private void addsolutiontext() {
 		solutions.add("I3 = I1 + I2");
-		solutions.add("-" + v3 + "V + " + r4 + "Î©*I2 + " + r3 + "Î©*I2 + " + r2
-				+ "Î©*I3 + " + v2 + "V = 0");
-		solutions.add("-" + v1 + "V + " + r1 + "Î©*I1 + " + r2 + "Î©*I3 + " + v2
+		solutions.add("-" + v3 + "V + " + r4 + "½*I2 + " + r3 + "½*I2 + " + r2
+				+ "½*I3 + " + v2 + "V = 0");
+		solutions.add("-" + v1 + "V + " + r1 + "½*I1 + " + r2 + "½*I3 + " + v2
 				+ "V = 0");
 		solutions.add("" + i3 + "A");
 		solutions.add("" + i1 + "A");

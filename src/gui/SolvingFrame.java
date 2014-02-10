@@ -90,7 +90,7 @@ public class SolvingFrame extends JFrame {
 	JButton clear = new JButton("CLEAR");
 	JButton home = new JButton("HOME");
 	JButton volts = new JButton("V");
-	JButton ohms = new JButton("Î©");
+	JButton ohms = new JButton("½");
 	JButton amps = new JButton("A");
 	private Vertex<String> numcor = new Vertex<String>("Numerically Correct1",
 			2);
@@ -179,19 +179,19 @@ public class SolvingFrame extends JFrame {
 		else
 			V3.setText("V3=");
 		if (visible[3])
-			R1.setText("R1=" + values[3] + "Î©");
+			R1.setText("R1=" + values[3] + "½");
 		else
 			R1.setText("R1=");
 		if (visible[4])
-			R2.setText("R2=" + values[4] + "Î©");
+			R2.setText("R2=" + values[4] + "½");
 		else
 			R2.setText("R2=");
 		if (visible[5])
-			R3.setText("R3=" + values[5] + "Î©");
+			R3.setText("R3=" + values[5] + "½");
 		else
 			R3.setText("R3=");
 		if (visible[6])
-			R4.setText("R4=" + values[6] + "Î©");
+			R4.setText("R4=" + values[6] + "½");
 		else
 			R4.setText("R4=");
 		if (visible[7])
@@ -513,7 +513,7 @@ public class SolvingFrame extends JFrame {
 				JTextPane focused = findFocused();
 				if (focused != null) {
 					String input = focused.getText();
-					focused.setText(input + "Î©");
+					focused.setText(input + "½");
 				}
 			}
 		});
@@ -725,7 +725,7 @@ public class SolvingFrame extends JFrame {
 						- values[i]) < 0.01) {
 					if (i < 3 && input[i].endsWith("V"))
 						result &= true;
-					else if (i > 2 && i < 7 && input[i].endsWith("Î©"))
+					else if (i > 2 && i < 7 && input[i].endsWith("½"))
 						result &= true;
 					else if (i > 6 && input[i].endsWith("A"))
 						result &= true;

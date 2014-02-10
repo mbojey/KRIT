@@ -62,7 +62,7 @@ public class easyMode3 extends Mode3 {
 		super.correct = correct;
 		super.questiontype = questiontype;
 		super.questiondata = questiondata = "V1 = " + v1 + "V, V2 = " + v2
-				+ "V\nR1 = " + r1 + "Î©, R2 = " + r2 + "Î©, R3 = " + r3 + "Î©";
+				+ "V\nR1 = " + r1 + "½, R2 = " + r2 + "½, R3 = " + r3 + "½";
 	}
 	@SuppressWarnings("static-access")
 	public void setjunctionchoice(char choice){
@@ -159,11 +159,11 @@ public class easyMode3 extends Mode3 {
 	private void addsolutiontext() {
 		solutions.add("I1 + I2 = I3");
 		//abdca
-		solutions.add("-" + v1  +"V + " + r1 + "Î©*I1 - " + v2 + "V - "+ r3 + "Î©*I2 = 0");
+		solutions.add("-" + v1  +"V + " + r1 + "½*I1 - " + v2 + "V - "+ r3 + "½*I2 = 0");
 		//abfea
-		solutions.add("-" + v1  +"V - " + r2 + "Î©*I3 - " + r3 + "Î©*I2 = 0");
+		solutions.add("-" + v1  +"V - " + r2 + "½*I3 - " + r3 + "½*I2 = 0");
 		//cdfec
-		solutions.add(v2 + "V - " + r1 + "Î©*I1 - " + r2 + "Î©*I3 = 0");
+		solutions.add(v2 + "V - " + r1 + "½*I1 - " + r2 + "½*I3 = 0");
 		solutions.add("" + i2 + "A");
 		solutions.add("" + i1 + "A");
 		solutions.add("" + i3 + "A");
